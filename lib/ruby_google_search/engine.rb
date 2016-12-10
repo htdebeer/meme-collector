@@ -166,7 +166,7 @@ module RubyGoogleSearch
         response = Net::HTTP.get_response(uri)
 
         if response.is_a? Net::HTTPSuccess
-          GoogleCustomSearchResults.from_json self, response.body
+          RubyGoogleSearch::Results.from_json self, response.body
         else 
           throw Error.new "Problem running query URI '#{uri}': #{reponse}"
         end

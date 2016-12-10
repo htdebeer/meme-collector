@@ -66,13 +66,13 @@ module RubyGoogleSearch
       items = []
       data["items"].each do |item|
         if item.has_key? "image"
-          items.push GoogleCustomSearchImage.new(item)
+          items.push RubyGoogleSearch::Image.new(item)
         else
-          items.push GoogleCustomSearchItem.new(item)
+          items.push RubyGoogleSearch::Item.new(item)
         end
       end
 
-      GoogleCustomSearchResults.new engine,
+      Results.new engine,
         total_results,
         start_index,
         count,
@@ -87,13 +87,13 @@ module RubyGoogleSearch
       items = []
       data["items"].each do |item|
         if item.has_key? "thumbnail"
-          items.push GoogleCustomSearchImage.new(item)
+          items.push RubyGoogleSearch::Image.new(item)
         else
-          items.push GoogleCustomSearchItem.new(item)
+          items.push RubyGoogleSearch::Item.new(item)
         end
       end
 
-      GoogleCustomSearchResults.new nil,
+      Results.new nil,
         total_results,
         start_index,
         count,
