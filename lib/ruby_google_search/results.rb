@@ -17,6 +17,7 @@
 require "json"
 require "yaml"
 
+require_relative "./engine.rb"
 require_relative "./item.rb"
 require_relative "./image.rb"
 
@@ -39,19 +40,12 @@ module RubyGoogleSearch
       @items.each(&block)
     end
 
-    def merge other
-      @count += other.count
+    def merge! other
       other.each do |item|
-        @items.push item
+        @items << item
       end
-    end
-
-    def merge_next_page
-      if @engine.nil?
-        return false
-      else
-        merge @engine.next_page
-      end
+      @count += other.count
+      self
     end
 
     def self.from_json engine, json_data
@@ -59,16 +53,18 @@ module RubyGoogleSearch
       queries = data["queries"]
       request = queries["request"][0]
 
-      total_results = request["totalResults"]
-      start_index = request["startIndex"]
-      count = request["count"]
+      total_results = Integer(request["totalResults"])
+      start_index = Integer(request["startIndex"])
+      count = Integer(request["count"])
 
       items = []
-      data["items"].each do |item|
-        if item.has_key? "image"
-          items.push RubyGoogleSearch::Image.new(item)
-        else
-          items.push RubyGoogleSearch::Item.new(item)
+      if data.has_key? "items" 
+        data["items"].each do |item|
+          if item.has_key? "image"
+            items.push RubyGoogleSearch::Image.new(item)
+          else
+            items.push RubyGoogleSearch::Item.new(item)
+          end
         end
       end
 
@@ -80,7 +76,10 @@ module RubyGoogleSearch
     end
 
     def self.from_yaml yaml_data
-      data = YAML.load yaml_data
+      load YAML.load(yaml_data)
+    end
+
+    def self.load data
       total_results = data["total_results"]
       start_index = data["start_index"]
       count = data["count"]
@@ -93,7 +92,9 @@ module RubyGoogleSearch
         end
       end
 
-      Results.new nil,
+      engine = RubyGoogleSearch::Engine.load data["engine"]
+
+      Results.new engine,
         total_results,
         start_index,
         count,
@@ -102,7 +103,7 @@ module RubyGoogleSearch
 
     def to_h
       {
-        "uri" => @engine.to_uri.to_s,
+        "engine" => @engine.to_h,
         "total_results" => @total_results,
         "start_index" => @start_index,
         "count" => @count,

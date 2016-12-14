@@ -20,6 +20,7 @@ require "json"
 require "date"
 
 require_relative "./results.rb"
+require_relative "./api_error.rb"
 
 module RubyGoogleSearch
   class Engine
@@ -35,14 +36,23 @@ module RubyGoogleSearch
     # default to ENV["GOOGLE_API_KEY"] and ENV["GOOGLE_SEARCH_ENGINE_ID"]
     # respectively.
     def initialize api_key = ENV["GOOGLE_API_KEY"], search_engine_id = ENV["GOOGLE_SEARCH_ENGINE_ID"]
+      @results = nil
       @parameters = {
         "key" => api_key,
         "cx" => search_engine_id
       }
-      @dry_run = false
       @from = nil
       @to = nil
       @start_index = 1
+    end
+
+    def self.load hash
+      engine = Engine.new
+      hash["parameter"].each_pair {|key, value| engine.parameter key, value}
+      engine.from hash["from"]
+      engine.to hash["to"]
+      engine.start_index hash["start_index"]
+      engine
     end
 
     ##
@@ -73,24 +83,29 @@ module RubyGoogleSearch
       run
     end
 
+
+    ## 
+    # Does this engine have a next page with results?
+    def has_next_page?
+      not @results.nil? and (@start_index + 10) < @results.total_results
+    end
+
     ##
     # Run the engine again with the same settings, but get the next 10 results
     def next_page
-      start_index(@start_index + 10)
-      run
+      if has_next_page?
+        start @start_index + 10
+        @results.merge! run
+      end
+
+      @results
     end
 
     ##
     # Set the search string
     def query string
       @parameters["q"] = string
-    end
-
-    ##
-    # Setup the engine to do a dry-run: do not actually run the search, only build
-    # the search URI
-    def dry_run 
-      @dry_run = true
+      self
     end
 
     ##
@@ -146,9 +161,25 @@ module RubyGoogleSearch
 
     ##
     # Setup the engine to return 10 results starting from index
-    def start_index index
+    def start index
       @start_index = index
       @parameters["start"] = index
+      self
+    end
+
+    ##
+    # Setup the engine to return the first 10 items
+    def restart
+      @start_index = 1
+      @parameters.delete "start"
+      self
+    end
+
+    ##
+    # Setup the engine with any parameter
+    def parameter key, value
+      @parameters[key] = value
+      self
     end
 
     def to_uri
@@ -157,23 +188,25 @@ module RubyGoogleSearch
       uri
     end
 
+    def to_h
+      {
+        "from" => @from,
+        "to" => @to,
+        "start_index" => @start_index,
+        "parameters" => @parameters
+      }
+    end
+
     private 
 
     def run
       uri = to_uri 
-      if not @dry_run
-
-        response = Net::HTTP.get_response(uri)
-
-        if response.is_a? Net::HTTPSuccess
-          RubyGoogleSearch::Results.from_json self, response.body
-        else 
-          throw Error.new "Problem running query URI '#{uri}': #{reponse}"
-        end
-
-      else
-        # When the search is run in dry_run mode, only return the search URI
-        uri
+      response = Net::HTTP.get_response(uri)
+      if response.is_a? Net::HTTPSuccess
+        @results = RubyGoogleSearch::Results.from_json self, response.body
+        @results
+      else 
+        raise RubyGoogleSearch::APIError, "Problem running query URI '#{uri}': #{response}"
       end
     end 
 
