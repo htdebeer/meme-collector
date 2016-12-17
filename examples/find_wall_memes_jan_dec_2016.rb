@@ -26,7 +26,7 @@ JANUARY.upto(DECEMBER) do |month|
   if results.nil?
     results = month_results
   else
-    results.merge month_results
+    results.merge! month_results
   end
 end
 
