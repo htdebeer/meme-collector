@@ -14,9 +14,11 @@
 #
 # You should have received a copy of the GNU General Public License along with
 # meme-collector.  If not, see <http://www.gnu.org/licenses/>.
-module Api
-  module Search
-    class SeachApiError < Api::APIError
+require_relative "../meme_collector_error.rb"
+
+module MemeCollector
+  module Api
+    class APIError < MemeCollector::MemeCollectorError
     end
   end
 end

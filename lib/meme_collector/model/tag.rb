@@ -14,32 +14,11 @@
 #
 # You should have received a copy of the GNU General Public License along with
 # meme-collector.  If not, see <http://www.gnu.org/licenses/>.
-require "open-uri"
-require "uri"
 
-module Api
-  module Search
-    class Item
-      attr_reader :title, :link
+require "sequel"
 
-      def initialize item
-        @title = item["title"]
-        @link = item["link"]
-      end
-
-      def download dir = "."
-        downloaded = open(@link)
-        path = File.join(dir, File.basename(URI(@link).path))
-        IO.copy_stream(downloaded, path)
-      end
-
-
-      def to_h
-        {
-          "title" => @title,
-          "link" => @link
-        }
-      end
-    end
+module MemeCollector
+  class Tag < Sequel::Model
+    many_to_many :memes, :left_key => :meme_id, :right_key => :tag_name, :join_table => :tagged
   end
 end

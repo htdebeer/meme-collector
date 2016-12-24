@@ -14,33 +14,21 @@
 #
 # You should have received a copy of the GNU General Public License along with
 # meme-collector.  If not, see <http://www.gnu.org/licenses/>.
-require_relative "./item.rb"
+require "open-uri"
+require "uri"
 
-module Api
-  module Search
+module MemeCollector
+  module Api
+    module Search
+      class Item
+        attr_reader :title, :link, :rank
 
-    class Image < Item
-
-      attr_reader :context, :height, :width, :thumbnail 
-
-      def initialize item
-        super item
-        image = item["image"]
-        @context = image["contextLink"]
-        @height = image["height"]
-        @width = image["width"]
-        @thumbnail = image["thumbnailLink"]
+        def initialize item, rank
+          @title = item["title"]
+          @link = item["link"]
+          @rank = rank
+        end
       end
-
-      def to_h
-        h = super
-        h["context"] = @context
-        h["height"] = @height
-        h["width"] = @width
-        h["thumbnail"] = @thumbnail
-        h
-      end
-
     end
   end
 end

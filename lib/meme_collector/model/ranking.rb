@@ -14,7 +14,12 @@
 #
 # You should have received a copy of the GNU General Public License along with
 # meme-collector.  If not, see <http://www.gnu.org/licenses/>.
-module Api
-  class APIError < StandardError
+
+require "sequel"
+
+module MemeCollector
+  class Ranking < Sequel::Model
+    many_to_one :periods
+    many_to_one :memes
   end
 end
