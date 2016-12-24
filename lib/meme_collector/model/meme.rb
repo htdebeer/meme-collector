@@ -17,6 +17,10 @@
 
 require "sequel"
 
+require_relative "../meme_collector_error.rb"
+require_relative "../api/imgur/imgur_api_error.rb"
+require_relative "../api/imgur/engine.rb"
+
 module MemeCollector
   class Meme < Sequel::Model
     many_to_many :periods, :join_table => :rankings
@@ -24,6 +28,28 @@ module MemeCollector
 
     def validated?
       not valid.nil?
+    end
+
+    def get_imgur_data
+      begin
+        engine = Api::Imgur::Engine.new
+        image = engine.get_image link
+        update(
+          :imgur_id => image.id,
+          :imgur_title => image.title,
+          :imgur_description => image.description,
+          :imgur_uploaded => image.uploaded,
+          :imgur_type => image.type,
+          :imgur_width => image.width,
+          :imgur_height => image.height,
+          :imgur_size => image.size,
+          :imgur_views => image.views,
+          :imgur_bandwidth => image.bandwidth,
+          :imgur_section => image.section
+        )
+      rescue Api::Imgur::ImgurApiError => e
+        raise MemeCollectorError.new "Error while trying to find more memes: #{e.message}"
+      end
     end
 
   end

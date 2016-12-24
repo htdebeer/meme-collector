@@ -17,9 +17,9 @@
 require "sequel"
 
 require_relative "../meme_collector_error.rb"
+require_relative "../api/search/search_api_error.rb"
 require_relative "../api/search/engine.rb"
 require_relative "./meme"
-
 
 module MemeCollector
   class Period < Sequel::Model
@@ -46,6 +46,8 @@ module MemeCollector
             meme = Meme.create(:link => result.link, :context => result.context)
           end
 
+          meme.get_imgur_data
+
           add_meme(meme)
 
           Ranking
@@ -53,8 +55,9 @@ module MemeCollector
             .first
             .update(:rank => result.rank)
         end
-      rescue Api::Search::SearchApiError => e
-        raise MemeCollectorError.new "Error while trying to find more memes: #{e.message}"
+      rescue Api::Search::SearchApiError, Api::Imgur::ImgurApiError => e
+        warn "Error while trying to collect more memes: #{e.message}"
+        # raise MemeCollectorError.new "Error while trying to find more memes: #{e.message}"
       end
     end
 
