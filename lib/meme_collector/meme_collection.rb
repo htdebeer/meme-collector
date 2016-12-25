@@ -107,14 +107,14 @@ module MemeCollector
     #
     # raises error
     def collect!
-      begin
-        periods.each do |period|
+      periods.each do |period|
+        begin
           period.find_more
+        rescue MemeCollectorError => e
+          warn e.message
         end
-        self
-      rescue MemeCollectorError => e
-        warn e.message
       end
+      self
     end
 
     private
@@ -140,7 +140,7 @@ module MemeCollector
       while start < to
         till = start + PERIOD_SIZE
         periods.insert :from => start, :to => till
-        start = till
+        start = till + 1
       end
 
       db.create_table(:memes) do
@@ -167,10 +167,10 @@ module MemeCollector
       end
 
       db.create_table(:rankings) do
+        primary_key :id
         Fixnum :meme_id
         Fixnum :period_id
         Fixnum :rank, :default => -1
-        primary_key [:meme_id, :period_id]
       end
 
       db.create_table(:tags) do

@@ -51,13 +51,12 @@ module MemeCollector
           add_meme(meme)
 
           Ranking
-            .where(:meme_id => meme.id, :period_id => id)
+            .where(:meme_id => meme.id, :period_id => id, :rank => -1)
             .first
             .update(:rank => result.rank)
         end
       rescue Api::Search::SearchApiError, Api::Imgur::ImgurApiError => e
         warn "Error while trying to collect more memes: #{e.message}"
-        # raise MemeCollectorError.new "Error while trying to find more memes: #{e.message}"
       end
     end
 

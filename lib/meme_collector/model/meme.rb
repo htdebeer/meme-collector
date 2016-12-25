@@ -48,7 +48,7 @@ module MemeCollector
           :imgur_section => image.section
         )
       rescue Api::Imgur::ImgurApiError => e
-        raise MemeCollectorError.new "Error while trying to find more memes: #{e.message}"
+        warn MemeCollectorError.new "Error while trying to find more memes: #{e.message}"
       end
     end
 
