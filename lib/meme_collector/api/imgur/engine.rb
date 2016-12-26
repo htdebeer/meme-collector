@@ -47,10 +47,17 @@ module MemeCollector
             "Authorization" => "Client-ID #{@imgur_client_id}"
           }
 
-          request = Net::HTTP::Get.new(path, headers)
-          http = Net::HTTP.new(uri.host, uri.port)
-          http.use_ssl = true
-          response = http.request(request)
+          begin 
+            request = Net::HTTP::Get.new(path, headers)
+            http = Net::HTTP.new(uri.host, uri.port)
+            http.use_ssl = true
+            response = http.request(request)
+          rescue Net::HTTPTooManyRequests => e
+            # raise it again, this particulal error should be handled
+            # elsewhere
+            raise e
+          end
+
           if response.is_a? Net::HTTPSuccess
             Image.load JSON.parse(response.body)["data"]
           else 

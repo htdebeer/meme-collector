@@ -16,6 +16,7 @@
 # meme-collector.  If not, see <http://www.gnu.org/licenses/>.
 
 require "sequel"
+require "net/http"
 
 require_relative "./meme_collector_error.rb"
 
@@ -120,13 +121,39 @@ module MemeCollector
     # Get Imgur data for up to N memes, optionally wait seconds in between
     # each call
     def delve! n = 10, wait = 0
+      delved = 0
       memes.where(:imgur_id => nil).limit(n).each do |meme|
         begin
           meme.get_imgur_data
+        rescue Net::HTTPTooManyRequests => e
+          warn "Too many requests: #{e.message}"
+          warn "Exiting program. Do not run program again in the next 60 minutes."
+          exit
         rescue MemeCollectorError => e
           warn e.message
         end
+        puts "#{delved} #{meme.link}"
+        delved += 1
         sleep(wait)
+      end
+      self
+    end
+
+    def delve_all! seconds_to_wait = 15
+      delved = 0
+      memes.where(:imgur_id => nil).each do |meme|
+        begin
+          meme.get_imgur_data
+        rescue Net::HTTPTooManyRequests => e
+          warn "Too many requests: #{e.message}"
+          warn "Exiting program. Do not run program again in the next 60 minutes."
+          exit
+        rescue MemeCollectorError => e
+          warn e.message
+        end
+        puts "#{delved} #{meme.link}"
+        delved += 1
+        sleep(seconds_to_wait)
       end
       self
     end

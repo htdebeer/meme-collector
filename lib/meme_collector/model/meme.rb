@@ -16,6 +16,7 @@
 # meme-collector.  If not, see <http://www.gnu.org/licenses/>.
 
 require "sequel"
+require "net/http"
 
 require_relative "../meme_collector_error.rb"
 require_relative "../api/imgur/imgur_api_error.rb"
@@ -47,8 +48,10 @@ module MemeCollector
           :imgur_bandwidth => image.bandwidth,
           :imgur_section => image.section
         )
+      rescue Net::HTTPTooManyRequests => e
+        raise e
       rescue Api::Imgur::ImgurApiError => e
-        raise MemeCollectorError.new "Error while trying to get Imgur information for this image #{image.link}: #{e.message}"
+        raise MemeCollectorError.new "Error while trying to get Imgur information for this image: #{e.message}"
       end
     end
 
