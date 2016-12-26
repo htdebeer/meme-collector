@@ -46,8 +46,6 @@ module MemeCollector
             meme = Meme.create(:link => result.link, :context => result.context)
           end
 
-          meme.get_imgur_data
-
           add_meme(meme)
 
           Ranking

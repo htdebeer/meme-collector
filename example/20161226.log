@@ -1,0 +1,496 @@
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/R5wgzpe.json':
+#<Net::HTTPNotFound:0x0056363ce28f60>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/R5wgzpe.json':
+#<Net::HTTPNotFound:0x0056363cfede18>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/R5wgzpe.json':
+#<Net::HTTPNotFound:0x0056363cd9f7d8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/R5wgzpe.json':
+#<Net::HTTPNotFound:0x0056363cf23438>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/R5wgzpe.json':
+#<Net::HTTPNotFound:0x0056363c706020>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/R5wgzpe.json':
+#<Net::HTTPNotFound:0x0056363ccb3e28>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/R5wgzpe.json':
+#<Net::HTTPNotFound:0x0056363c56a108>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/R5wgzpe.json':
+#<Net::HTTPNotFound:0x0056363d004258>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/R5wgzpe.json':
+#<Net::HTTPNotFound:0x0056363cdca320>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/P91U0pA.json':
+#<Net::HTTPTooManyRequests:0x0056363c6b3618>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/RwgWrwY.json':
+#<Net::HTTPTooManyRequests:0x0056363c633878>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/Ma3zyf9.json':
+#<Net::HTTPTooManyRequests:0x0056363c575fd0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/Ud5IYae.json':
+#<Net::HTTPTooManyRequests:0x0056363c36deb8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/sXP2rJ0.json':
+#<Net::HTTPTooManyRequests:0x0056363c2b3838>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/6YWpyEQ.json':
+#<Net::HTTPTooManyRequests:0x0056363c0f1d88>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/8JSVtUW.json':
+#<Net::HTTPTooManyRequests:0x0056363d110db8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/drtv5pd.json':
+#<Net::HTTPTooManyRequests:0x0056363d110908>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/Ud5IYae.json':
+#<Net::HTTPTooManyRequests:0x0056363d153730>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/sXP2rJ0h.json':
+#<Net::HTTPTooManyRequests:0x0056363d02fd90>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/o9zs2HMr.json':
+#<Net::HTTPTooManyRequests:0x0056363cf9c220>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/dkFf8yc.json':
+#<Net::HTTPTooManyRequests:0x0056363cfef100>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/d3usAxa.json':
+#<Net::HTTPTooManyRequests:0x0056363d0c3478>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/expwalLr.json':
+#<Net::HTTPTooManyRequests:0x0056363d196238>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/O8PdnAh.json':
+#<Net::HTTPTooManyRequests:0x0056363cf58868>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/dkFf8yc.json':
+#<Net::HTTPTooManyRequests:0x0056363cf08340>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/PvA828a.json':
+#<Net::HTTPTooManyRequests:0x0056363ce77020>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/7pF1For.json':
+#<Net::HTTPTooManyRequests:0x0056363ce40660>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/7mbYVNE.json':
+#<Net::HTTPTooManyRequests:0x0056363ce09db8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/tCyVLV3.json':
+#<Net::HTTPTooManyRequests:0x0056363cde5670>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/tCyVLV3r.json':
+#<Net::HTTPTooManyRequests:0x0056363cdb49a8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/nRMePch.json':
+#<Net::HTTPTooManyRequests:0x0056363ccf7f88>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/brzcqzh.json':
+#<Net::HTTPTooManyRequests:0x0056363ccb8090>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/om9zAqx.json':
+#<Net::HTTPTooManyRequests:0x0056363cca4310>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/nRMePchh.json':
+#<Net::HTTPTooManyRequests:0x0056363cc73580>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/wVG1NoD.json':
+#<Net::HTTPTooManyRequests:0x0056363cc45590>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/zkxiDEYh.json':
+#<Net::HTTPTooManyRequests:0x0056363cc0c8d0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/7UpQGf0.json':
+#<Net::HTTPTooManyRequests:0x0056363cbfcae8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/zkxiDEY.json':
+#<Net::HTTPTooManyRequests:0x0056363c7afbe8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/reY8yJ2.json':
+#<Net::HTTPTooManyRequests:0x0056363c78a258>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/vFCHRyB.json':
+#<Net::HTTPTooManyRequests:0x0056363c71ef58>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/vH4qi7N.json':
+#<Net::HTTPTooManyRequests:0x0056363c5fd818>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/evgt99A.json':
+#<Net::HTTPTooManyRequests:0x0056363c565978>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/M1NIRh1.json':
+#<Net::HTTPTooManyRequests:0x0056363c3aa5c0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/DgqI8qI.json':
+#<Net::HTTPTooManyRequests:0x0056363c3280c0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/Y1offAZ.json':
+#<Net::HTTPTooManyRequests:0x0056363c266948>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/31RTfTt.json':
+#<Net::HTTPTooManyRequests:0x0056363c2abae8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/jUd5Rjt.json':
+#<Net::HTTPTooManyRequests:0x0056363c0d8810>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/IpMT77s.json':
+#<Net::HTTPTooManyRequests:0x0056363cfc1070>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/gM98gdL.json':
+#<Net::HTTPTooManyRequests:0x0056363d11da40>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/jfgot5t.json':
+#<Net::HTTPTooManyRequests:0x0056363d129610>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/lFN1uyi.json':
+#<Net::HTTPTooManyRequests:0x0056363cf9c4a0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/lFN1uyih.json':
+#<Net::HTTPTooManyRequests:0x0056363d07cb18>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/4WRB88Z.json':
+#<Net::HTTPTooManyRequests:0x0056363d03d1c0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/SoAqI97.json':
+#<Net::HTTPTooManyRequests:0x0056363d159360>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/UxUrnUB.json':
+#<Net::HTTPTooManyRequests:0x0056363d1959f0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/0RGOsMn.json':
+#<Net::HTTPTooManyRequests:0x0056363cf29748>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/53Ku4CN.json':
+#<Net::HTTPTooManyRequests:0x0056363cec1058>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/53Ku4CNh.json':
+#<Net::HTTPTooManyRequests:0x0056363ce63700>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/ceQdnNO.json':
+#<Net::HTTPTooManyRequests:0x0056363ce35238>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/UxUrnUB.json':
+#<Net::HTTPTooManyRequests:0x0056363ce02c98>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/Psxz73D.json':
+#<Net::HTTPTooManyRequests:0x0056363cd9ec98>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/nRMePch.json':
+#<Net::HTTPTooManyRequests:0x0056363cd890f0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/qDCA1ov.json':
+#<Net::HTTPTooManyRequests:0x0056363ccf7ec0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/xFZMJwT.json':
+#<Net::HTTPTooManyRequests:0x0056363ccb7de8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/bXNqDMz.json':
+#<Net::HTTPTooManyRequests:0x0056363cca4018>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/Yv2ajuG.json':
+#<Net::HTTPTooManyRequests:0x0056363cc73260>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/nRMePchh.json':
+#<Net::HTTPTooManyRequests:0x0056363cc54d38>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/Jr41Q1K.json':
+#<Net::HTTPTooManyRequests:0x0056363cc0f3f0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/N0qlIPb.json':
+#<Net::HTTPTooManyRequests:0x0056363cbff798>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/NibgZXc.json':
+#<Net::HTTPTooManyRequests:0x0056363cbce8a0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/G7Cigc4.json':
+#<Net::HTTPTooManyRequests:0x0056363c7325d0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/N8zKyCA.json':
+#<Net::HTTPTooManyRequests:0x0056363c6add30>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/Jr41Q1K.json':
+#<Net::HTTPTooManyRequests:0x0056363c631eb0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/2MRnCOl.json':
+#<Net::HTTPTooManyRequests:0x0056363c575c88>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/GhTb64U.json':
+#<Net::HTTPTooManyRequests:0x0056363c3d77a0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/oTWciZ9r.json':
+#<Net::HTTPTooManyRequests:0x0056363c3890f0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/UZWOpt5.json':
+#<Net::HTTPTooManyRequests:0x0056363c2e57e8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/oTWciZ9.json':
+#<Net::HTTPTooManyRequests:0x0056363c2bd270>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/HrVfv2G.json':
+#<Net::HTTPTooManyRequests:0x0056363c101a58>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/ymAvICM.json':
+#<Net::HTTPTooManyRequests:0x0056363c0b2db8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/1HcmwU1.json':
+#<Net::HTTPTooManyRequests:0x0056363d11f390>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/97TswEg.json':
+#<Net::HTTPTooManyRequests:0x0056363cfdf890>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/ygS4PcW.json':
+#<Net::HTTPTooManyRequests:0x0056363d007ea8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/E6615Jb.json':
+#<Net::HTTPTooManyRequests:0x0056363d088440>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/ao6m5yb.json':
+#<Net::HTTPTooManyRequests:0x0056363cffca80>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/E6615Jbh.json':
+#<Net::HTTPTooManyRequests:0x0056363cf74e00>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/NOrJC08.json':
+#<Net::HTTPTooManyRequests:0x0056363d165228>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/E6615Jb.json':
+#<Net::HTTPTooManyRequests:0x0056363cf65680>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/KAmZAZah.json':
+#<Net::HTTPTooManyRequests:0x0056363cf1cd90>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/KAmZAZa.json':
+#<Net::HTTPTooManyRequests:0x0056363ce7ff18>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/Op6FxnI.json':
+#<Net::HTTPTooManyRequests:0x0056363ce0c9f0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/OmUZg6Xr.json':
+#<Net::HTTPTooManyRequests:0x0056363cde8140>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/Op6FxnIh.json':
+#<Net::HTTPTooManyRequests:0x0056363cdb7e28>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/RkvZ7SI.json':
+#<Net::HTTPTooManyRequests:0x0056363cd91e80>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/PwnhO8h.json':
+#<Net::HTTPTooManyRequests:0x0056363cd3d1f0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/U6PYwXj.json':
+#<Net::HTTPTooManyRequests:0x0056363ccc6050>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/1brTuNO.json':
+#<Net::HTTPTooManyRequests:0x0056363cca8d70>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/BDF4pRI.json':
+#<Net::HTTPTooManyRequests:0x0056363cc88b38>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/BDF4pRIh.json':
+#<Net::HTTPTooManyRequests:0x0056363cc56db8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/VGxOxIo.json':
+#<Net::HTTPTooManyRequests:0x0056363cc15a98>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/bhjMYYd.json':
+#<Net::HTTPTooManyRequests:0x0056363cbce850>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/oxivTW4.json':
+#<Net::HTTPTooManyRequests:0x0056363c78e100>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/iaZdA04.json':
+#<Net::HTTPTooManyRequests:0x0056363c73c530>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/RcUVo0ch.json':
+#<Net::HTTPTooManyRequests:0x0056363c6b3b18>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/RcUVo0c.json':
+#<Net::HTTPTooManyRequests:0x0056363c634a70>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/uTPfNgq.json':
+#<Net::HTTPTooManyRequests:0x0056363c5771c8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/EZlxPzG.json':
+#<Net::HTTPTooManyRequests:0x0056363c3e64d0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/SdAs51g.json':
+#<Net::HTTPTooManyRequests:0x0056363c38a4c8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/eVzpKS0.json':
+#<Net::HTTPTooManyRequests:0x0056363c2e7d90>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/hJM8y2O.json':
+#<Net::HTTPTooManyRequests:0x0056363c2beb48>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/bhjMYYd.json':
+#<Net::HTTPTooManyRequests:0x0056363c0bcca0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/uTPfNgq.json':
+#<Net::HTTPTooManyRequests:0x0056363cfb7778>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/ewqFjOf.json':
+#<Net::HTTPTooManyRequests:0x0056363d12b7d0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/6JmqKWX.json':
+#<Net::HTTPTooManyRequests:0x0056363d0ebc20>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/fgxGNyn.json':
+#<Net::HTTPTooManyRequests:0x0056363d02c2a8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/jtDsEte.json':
+#<Net::HTTPTooManyRequests:0x0056363d1907e8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/K9MtVuK.json':
+#<Net::HTTPTooManyRequests:0x0056363d1accb8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/MrcfCJu.json':
+#<Net::HTTPTooManyRequests:0x0056363cfed2d8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/4BRmEBW.json':
+#<Net::HTTPTooManyRequests:0x0056363d0c1628>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/rJdyl4u.json':
+#<Net::HTTPTooManyRequests:0x0056363d0b9ae0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/VzotavH.json':
+#<Net::HTTPTooManyRequests:0x0056363ce86890>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/BSwl3zf.json':
+#<Net::HTTPTooManyRequests:0x0056363ce59390>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/0gIWsAk.json':
+#<Net::HTTPTooManyRequests:0x0056363ce190d8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/xytQq71.json':
+#<Net::HTTPTooManyRequests:0x0056363cdec9e8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/JnESiHZ.json':
+#<Net::HTTPTooManyRequests:0x0056363cdc8278>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/YA2qZoU.json':
+#<Net::HTTPTooManyRequests:0x0056363cd95fd0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/YA2qZoUh.json':
+#<Net::HTTPTooManyRequests:0x0056363cd74858>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/u5UDYiD.json':
+#<Net::HTTPTooManyRequests:0x0056363cce2b88>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/3FmZUvJ.json':
+#<Net::HTTPTooManyRequests:0x0056363ccb0ea8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/tiE0g9g.json':
+#<Net::HTTPTooManyRequests:0x0056363cc951d0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/ZYbsS4g.json':
+#<Net::HTTPTooManyRequests:0x0056363cc26a00>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/ohrPB0n.json':
+#<Net::HTTPTooManyRequests:0x0056363cc061b0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/HyiEHuU.json':
+#<Net::HTTPTooManyRequests:0x0056363cbf25e8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/sp3Ww85.json':
+#<Net::HTTPTooManyRequests:0x0056363c79d498>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/Z9LAdq0.json':
+#<Net::HTTPTooManyRequests:0x0056363c767e60>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/sp3Ww85h.json':
+#<Net::HTTPTooManyRequests:0x0056363c704180>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/tMl4ru5.json':
+#<Net::HTTPTooManyRequests:0x0056363c694ba0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/OFvuDw9r.json':
+#<Net::HTTPTooManyRequests:0x0056363c5d6d30>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/wu7SEZE.json':
+#<Net::HTTPTooManyRequests:0x0056363c41af28>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/tqRR05F.json':
+#<Net::HTTPTooManyRequests:0x0056363c3a32e8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/amoFfVC.json':
+#<Net::HTTPTooManyRequests:0x0056363c2601b0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/PYvG8IV.json':
+#<Net::HTTPTooManyRequests:0x0056363c26efa8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/qy3Eag1.json':
+#<Net::HTTPTooManyRequests:0x0056363c0c18b8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/5ullfoF.json':
+#<Net::HTTPTooManyRequests:0x0056363cf4f538>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/iQEQIW0.json':
+#<Net::HTTPTooManyRequests:0x0056363d063550>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/5vHcj6z.json':
+#<Net::HTTPTooManyRequests:0x0056363d153780>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/lVKESBy.json':
+#<Net::HTTPTooManyRequests:0x0056363d02fd90>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/9f3Lm0M.json':
+#<Net::HTTPTooManyRequests:0x0056363cf9c0b8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/4GblCcQ.json':
+#<Net::HTTPTooManyRequests:0x0056363d07c758>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/8bjVbHs.json':
+#<Net::HTTPTooManyRequests:0x0056363d03ce28>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/WBd3fUi.json':
+#<Net::HTTPTooManyRequests:0x0056363d0bb980>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/WBd3fUi.json':
+#<Net::HTTPTooManyRequests:0x0056363ce92fc8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/IJ2OhqJ.json':
+#<Net::HTTPTooManyRequests:0x0056363ce61220>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/tmwk19Y.json':
+#<Net::HTTPTooManyRequests:0x0056363ce2a3b0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/CgtWGxt.json':
+#<Net::HTTPTooManyRequests:0x0056363ce00b50>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/zlVaw14.json':
+#<Net::HTTPTooManyRequests:0x0056363cdd83a8>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/5uYCV8G.json':
+#<Net::HTTPTooManyRequests:0x0056363cd9e720>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/apIZrOc.json':
+#<Net::HTTPTooManyRequests:0x0056363cd7c760>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/k76FUN1r.json':
+#<Net::HTTPTooManyRequests:0x0056363ccef0e0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/R5wgzpe.json':
+#<Net::HTTPNotFound:0x0056363cca6660>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/R5wgzpe.json':
+#<Net::HTTPTooManyRequests:0x0056363cc7d198>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/R5wgzpe.json':
+#<Net::HTTPTooManyRequests:0x0056363cc24818>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/R5wgzpe.json':
+#<Net::HTTPTooManyRequests:0x0056363cc06de0>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/R5wgzpe.json':
+#<Net::HTTPTooManyRequests:0x0056363c7afb20>
+Error while trying to find more memes: Problem running URI
+'https://api.imgur.com/3/image/R5wgzpe.json':
+#<Net::HTTPTooManyRequests:0x0056363c78e380>
+

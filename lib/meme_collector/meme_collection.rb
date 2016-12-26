@@ -117,6 +117,20 @@ module MemeCollector
       self
     end
 
+    # Get Imgur data for up to N memes, optionally wait seconds in between
+    # each call
+    def delve! n = 10, wait = 0
+      memes.where(:imgur_id => nil).limit(n).each do |meme|
+        begin
+          meme.get_imgur_data
+        rescue MemeCollectorError => e
+          warn e.message
+        end
+        sleep(wait)
+      end
+      self
+    end
+
     private
 
     def create_database db, query, from, to
