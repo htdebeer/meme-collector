@@ -179,7 +179,7 @@ module MemeCollector
       periods = db[:periods]
       start = from
       while start < to
-        till = start + PERIOD_SIZE
+        till = start + PERIOD_SIZE - 1
         periods.insert :from => start, :to => till
         start = till + 1
       end
