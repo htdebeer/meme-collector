@@ -1,0 +1,56 @@
+<h1>Period <%= @period.from %> — <%= @period.to %></h1>
+<% if not @errors.empty? %>
+  <h2>Errors while submitting your changes:</h2>
+  <ul>
+    <% @errors.each do |error| %>
+      <li class="error"><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+<table class="period">
+  <thead>
+    <tr>
+      <th></th><th>rank</th><th>valid</th><th>tags</th><th class="number">views</th><th>title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%  rank = 0
+        @period.memes.each do |meme| 
+          rank += 1
+    %>
+  <tr data-valid="<%= meme.valid %>">
+    <td>
+      <a href="/memes/<%= meme.id %>" class="action">🔎</a>
+    </td>
+    <td class="number">
+      <%= rank %>
+    </td>
+    <td class="valid">
+      <%= if meme.valid.nil? then
+            "☐"
+          elsif meme.valid then
+            "☑"
+          else
+            "☒"
+          end
+        %>
+    </td>
+    <td>
+      <%= if meme.tags.empty?
+            "—"
+          else 
+            meme.tags.map {|t| t.name}.join("; ") 
+          end
+        %>
+    </td>
+    <td class="number">
+      <%= meme.imgur_views %>
+    </td>
+    <td>
+      <%= if meme.imgur_title.nil? then "—" else meme.imgur_title end %>
+      </td>
+    </tr>
+  <% end %>
+</tbody>
+      </table>
+

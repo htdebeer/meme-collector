@@ -1,0 +1,22 @@
+<h1>Overview</h1>
+<p>
+  Query: <code><%= @query %></code>
+</p>
+
+<h1>Periods</h1>
+<table>
+  <thead>
+    <tr><th></th><th>from</th><th>to</th><th class="number">memes</th><th class="number">total</th></tr>
+  </thead>
+  <tbody>
+    <% @periods.each do |period| %>
+      <tr>
+        <td><a href="/periods/<%= period.id %>" class="action">🔎</a></td>
+        <td><%= period.from %></td>
+        <td><%= period.to %></td>
+        <td class="number"><%= period.memes.size %></td>
+        <td class="number"><%= period.count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

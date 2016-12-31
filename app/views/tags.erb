@@ -1,0 +1,36 @@
+<h1>Tags</h1>
+<% if not @errors.empty? %>
+  <h2>Errors while submitting your changes:</h2>
+  <ul>
+    <% @errors.each do |error| %>
+      <li class="error"><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+<table>
+  <tbody>
+  <% @tags.each do |tag| %>
+    <tr>
+      <td>
+        <%= tag.name %>
+      </td>
+      <td>
+      <form method="POST" action="/tags/delete">
+        <input type="hidden" name="name" value="<%= tag.name %>">
+        <button type="submit" name="delete" class="action">×</button>
+      </form>
+      </td>
+    </tr>
+  <% end %>
+    <tr>
+      <form method="POST" action="/tags/add">
+        <td>
+            <input type="text" name="name" value="" placeholder="Tag name"/>
+        </td>
+        <td>
+          <button type="submit" name="add" class="action">+</button>
+        </td>
+      </form>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,88 @@
+<form method="POST" action="/memes/update">
+  <% if not @errors.empty? %>
+    <h2>Errors while submitting your changes:</h2>
+    <ul>
+      <% @errors.each do |error| %>
+        <li class="error"><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <table class="meme">
+    <tbody>
+      <tr class="header"><th colspan="2">General information</th></tr>
+      <tr>
+        <th>database id</th>
+        <td><%= @meme.id %><input type="hidden" name="id" value="<%= @meme.id %>"></td>
+      </tr> 
+      <tr>
+        <th>is a valid meme?</th>
+        <td>
+          <label>
+            <input 
+              name="valid[]" 
+              type="radio" 
+              value="valid" 
+              <%= "checked" if not @meme.valid.nil? and @meme.valid %>
+            > 
+            valid
+          </label>
+          <label>
+            <input 
+              name="valid[]" 
+              type="radio" 
+              value="invalid"
+              <%= "checked" if not @meme.valid.nil? and not @meme.valid %>
+            >
+            invalid
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <th>tags</th>
+        <td>
+          <% @tags.each do |tag| %>
+            <label class="tag">
+              <input 
+                type="checkbox" 
+                name="tags[]"
+                value="<%= tag.name %>"
+                <%= "checked" if @meme.tags.include? tag %>
+              />
+              <%= tag.name  %>
+            </label>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <button name="submit" type="submit">Submit</button>
+          <button name="clear" type="reset">Clear</button>
+        </td>
+      </tr>
+      <tr><th class="image">image</th><td><img src="<%= @meme.link %>"></td></tr>
+      <tr class="header"><th colspan="2">Periods</th></tr>
+      <% @meme.periods.each do |period| %>
+        <tr>
+          <td><a href="/periods/<%= period.id %>" class="action">🔎</a></td>
+          <td class="period"><%= period.from %>—<%= period.to %></td>
+        </tr>
+      <% end %>
+      <tr class="header"><th colspan="2">Google Custom Search API information</th></tr>
+      <tr><th>link</th><td><a href="<%= @meme.link %>"><%= @meme.link %></a></td></tr> 
+      <tr><th>context</th><td><a href="<%= @meme.context %>"><%= @meme.context %></a></td></tr> 
+      <tr class="header"><th colspan="2">Imgur API information</th></tr>
+      <tr><th>id</th><td><%= @meme.imgur_id %></td></tr> 
+      <tr><th>title</th><td><%= @meme.imgur_title %></td></tr> 
+      <tr><th>description</th><td><%= @meme.imgur_description %></td></tr> 
+      <tr><th>uploaded</th><td><%= @meme.imgur_uploaded %></td></tr> 
+      <tr><th>type</th><td><%= @meme.imgur_type %></td></tr> 
+      <tr><th>width</th><td><%= @meme.imgur_width %> pixels</td></tr> 
+      <tr><th>heigt</th><td><%= @meme.imgur_height %> pixels</td></tr> 
+      <tr><th>size</th><td><%= @meme.imgur_size %> bytes</td></tr> 
+      <tr><th>views</th><td><%= @meme.imgur_views %></td></tr> 
+      <tr><th>bandwidth</th><td><%= @meme.imgur_bandwidth %> bytes</td></tr> 
+      <tr><th>section</th><td><%= @meme.imgur_section %></td></tr>
+    </tbody>
+  </table>
+</form>
