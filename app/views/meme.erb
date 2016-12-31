@@ -1,4 +1,6 @@
+<h1>Meme</h1>
 <form method="POST" action="/memes/update">
+  <input type="hidden" name="period" value="<%= @period.id %>" />
   <% if not @errors.empty? %>
     <h2>Errors while submitting your changes:</h2>
     <ul>

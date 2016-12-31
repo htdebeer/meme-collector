@@ -92,8 +92,9 @@ class MemeCollectorApplication < Sinatra::Base
     end
   end
 
-  get "/memes/:id" do |meme_id|
+  get "/memes/:period/:id" do |period_id, meme_id|
     @errors = [] if @errors.nil?
+    @period = MC.periods[period_id]
     @meme = MC.memes[meme_id]
     @tags = MC.tags
     if @meme.nil? then
@@ -139,7 +140,8 @@ class MemeCollectorApplication < Sinatra::Base
         @meme.update(:valid => valid)
       end
       
-      tags = request['tags']
+      tags = if request['tags'].nil? then [] else request['tags'] end
+
       new_tags = tags
 
       @meme.tags_dataset.each do |meme_tag|
@@ -156,7 +158,13 @@ class MemeCollectorApplication < Sinatra::Base
         @meme.add_tag MC.tags[tag]
       end
 
-      redirect "/memes/#{@meme.id}"
+      period_id = request['period']
+
+      if not period_id.nil?
+        redirect "/periods/#{period_id}"
+      else
+        redirect "/overview"
+      end
     else
       halt "no form data"
     end

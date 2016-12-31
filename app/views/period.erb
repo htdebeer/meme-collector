@@ -20,7 +20,7 @@
     %>
   <tr data-valid="<%= meme.valid %>">
     <td>
-      <a href="/memes/<%= meme.id %>" class="action">🔎</a>
+      <a href="/memes/<%= @period.id %>/<%= meme.id %>" class="action">🔎</a>
     </td>
     <td class="number">
       <%= rank %>
