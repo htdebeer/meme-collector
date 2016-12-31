@@ -1,14 +1,14 @@
-= Meme-collector
+# Meme-collector
 
 Collect memes from Imgur about a topic during a period.
 
 This program is still under heavy development.
 
-== Licence
+## Licence
 
 meme-collector is released under the GPLv3
 
-== Requirements
+## Requirements
 
 To run the meme-collector
 
@@ -21,7 +21,7 @@ To collect memes:
 - Google API key and Google Custom Search Engine ID to find memes
 - Imgur API key to get meme image information from Imgur
 
-== Installation
+## Installation
 
     git clone https://github.com/htdebeer/meme-collector.git
 
@@ -29,9 +29,9 @@ To collect memes:
     gem install sqlite3
     gem install sequel
 
-== Usage
+## Usage
 
-=== Example scripts to collect Trump/wall memes
+### Example scripts to collect Trump/wall memes
 
 In the example directory you'll find three scripts and a database that collect
 memes about Trump and walls:
@@ -53,7 +53,7 @@ Run these example scripts as follows, for example:
     cd /path/to/meme-collector
     ruby example/collect_trump_wall_memes.rb
 
-=== Web application to validate and tag memes
+### Web application to validate and tag memes
 
 In the app directory you'll find the meme_collector_app.rb script, which is a
 Sinatra based web application. It now points to the trump-wall-memes.db file
@@ -68,7 +68,7 @@ You can run the web application on your local machine as follows:
 Now open http://localhost:4567/ to explore, tag, and validate the collected
 memes.
 
-=== Sqlite3
+### Sqlite3
 
 The collected memes are stored in a Sqlite3 database, which is just one file.
 In the example directory you'll find trump-wall-memes.db. You can open it with
