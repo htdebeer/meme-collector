@@ -7,4 +7,4 @@ CONFIG = {
 }
 
 # Generate new database
-MemeCollector::MemeCollection.generate "trump-wall-memes.db", CONFIG
+MemeCollector::MemeCollection.generate "trump-wall-memes-per-week.db", CONFIG
