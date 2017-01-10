@@ -4,7 +4,7 @@ require "sequel"
 
 require_relative "../lib/meme_collector/meme_collection.rb"
 
-MC = MemeCollector::MemeCollection.load "../example/trump-wall-memes.db"
+MC = MemeCollector::MemeCollection.load "../example/trump-wall-memes-per-week.db"
 
 class MemeCollectorApplication < Sinatra::Base
   set :sessions, true
