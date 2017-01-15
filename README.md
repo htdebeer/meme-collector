@@ -25,7 +25,7 @@ To collect memes:
 
     git clone https://github.com/htdebeer/meme-collector.git
 
-    sudo em install sinatra
+    sudo gem install sinatra
     sudo gem install sqlite3
     sudo gem install sequel
 
