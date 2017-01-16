@@ -1,0 +1,36 @@
+<h1><%= @memes.count %> valid memes</h1>
+<% if not @errors.empty? %>
+  <h2>Errors while submitting your changes:</h2>
+  <ul>
+    <% @errors.each do |error| %>
+      <li class="error"><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+<table class="memes">
+  <thead>
+    <tr>
+      <th class="number">id</th><th>uploaded</th><th>periods</th><th>title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @memes.each do |meme| %> 
+      <tr>
+        <td class="number">
+          <%= meme.id %>
+        </td>
+        <td>
+          <%= meme.imgur_uploaded %>
+        </td>
+        <td>
+          <% meme.periods.each do |period| %>
+            <a href="/memes/<%= period.id %>/<%= meme.id %>"><%= period.from %></a>
+          <% end %>
+        </td>
+        <td>
+          <%= meme.imgur_title %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

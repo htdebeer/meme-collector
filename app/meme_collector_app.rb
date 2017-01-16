@@ -103,6 +103,12 @@ class MemeCollectorApplication < Sinatra::Base
     erb :meme
   end
 
+  get "/valid/memes" do
+    @errors = [] if @errors.nil?
+    @memes = MC.memes.where(:valid => true).order(:imgur_uploaded)
+    erb :valid_memes
+  end
+
   get "/periods/:id" do |period_id|
     @errors = [] if @errors.nil?
     @period = MC.periods[period_id]
