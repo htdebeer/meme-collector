@@ -97,6 +97,7 @@ class MemeCollectorApplication < Sinatra::Base
     @period = MC.periods[period_id]
     @meme = MC.memes[meme_id]
     @tags = MC.tags
+
     if @meme.nil? then
       halt "Could not find meme with id = #{meme_id}"
     end
@@ -156,7 +157,7 @@ class MemeCollectorApplication < Sinatra::Base
           new_tags.delete meme_tag.name
         else
           # remove tag
-          meme_tag.delete
+          @meme.remove_tag meme_tag
         end
       end
 
