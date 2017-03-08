@@ -113,6 +113,7 @@ class MemeCollectorApplication < Sinatra::Base
   get "/periods/:id" do |period_id|
     @errors = [] if @errors.nil?
     @period = MC.periods[period_id]
+    @tags = MC.tags
     if @period.nil? then
       halt "Could not find period with id = #{period_id}"
     end

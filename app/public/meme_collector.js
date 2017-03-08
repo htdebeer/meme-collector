@@ -11,7 +11,10 @@ $.fn.dataTable.ext.search.push(filterInvalid);
 
 
 const dataTableConfiguration = {
-  "pageLength": 50
+  "pageLength": 50,
+  "dom": "<iftlpi>",
+  "columnDefs": [{ "width": "40%", targets: "limited"}],
+  "scrollX": true,
 };
 
 $(document).ready(function () {

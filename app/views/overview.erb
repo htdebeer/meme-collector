@@ -4,17 +4,19 @@
 </p>
 
 <h1>Periods</h1>
-<table class="table">
+<table class="">
   <thead>
-    <tr><th></th><th>from</th><th>to</th><th class="number">memes</th><th class="number">total</th></tr>
+    <tr><th></th><th class="number">id</th><th>from</th><th>to</th><th class="number">memes</th><th class="number">valid memes</th><th class="number">total</th></tr>
   </thead>
   <tbody>
     <% @periods.each do |period| %>
       <tr>
         <td><a href="/periods/<%= period.id %>" class="action">🔎</a></td>
+        <td class="number"><%= period.id %></td>
         <td><%= period.from %></td>
         <td><%= period.to %></td>
         <td class="number"><%= period.memes.size %></td>
+        <td class="number"><%= period.memes.select{|m|m[:valid]}.size %></td>
         <td class="number"><%= period.count %></td>
       </tr>
     <% end %>

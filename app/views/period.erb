@@ -7,10 +7,10 @@
     <% end %>
   </ul>
 <% end %>
-<table class="period table">
+<table class="period table display compact">
   <thead>
     <tr>
-      <th></th><th></th><th>rank</th><th>tags</th><th class="number">views</th><th>title</th>
+      <th></th><th></th><th>rank</th><th class="number">views</th><th class="limited">title</th><%@tags.each {|tag| %><th><%= tag.name %></th><%}%>
     </tr>
   </thead>
   <tbody>
@@ -28,20 +28,17 @@
     <td class="number">
       <%= rank %>
     </td>
-    <td>
-      <%= if meme.tags.empty?
-            "—"
-          else 
-            meme.tags.map {|t| t.name}.join("; ") 
-          end
-        %>
-    </td>
     <td class="number">
       <%= meme.imgur_views %>
     </td>
-    <td>
+    <td class="limited">
       <%= if meme.imgur_title.nil? then "—" else meme.imgur_title end %>
+    </td>
+    <% @tags.each do |tag| %>
+      <td>
+        <%= if meme.tags.include? tag then "✓" else "" end %>
       </td>
+    <% end %>
     </tr>
   <% end %>
 </tbody>
