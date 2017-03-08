@@ -1,46 +1,50 @@
-<h1>Period <%= @period.from %> — <%= @period.to %></h1>
-<% if not @errors.empty? %>
-  <h2>Errors while submitting your changes:</h2>
-  <ul>
-    <% @errors.each do |error| %>
-      <li class="error"><%= error %></li>
+<div id="wrapper">
+  <div id="meme_list">
+    <h1>Period <%= @period.from %> — <%= @period.to %></h1>
+    <% if not @errors.empty? %>
+      <h2>Errors while submitting your changes:</h2>
+      <ul>
+        <% @errors.each do |error| %>
+          <li class="error"><%= error %></li>
+        <% end %>
+      </ul>
     <% end %>
-  </ul>
-<% end %>
-<table class="period table display compact">
-  <thead>
-    <tr>
-      <th></th><th></th><th>rank</th><th class="number">views</th><th class="limited">title</th><%@tags.each {|tag| %><th><%= tag.name %></th><%}%>
-    </tr>
-  </thead>
-  <tbody>
-    <%  rank = 0
-        @period.memes.each do |meme| 
-          rank += 1
-    %>
-  <tr data-valid="<%= meme.valid %>">
-    <td>
-      <a href="/memes/<%= @period.id %>/<%= meme.id %>" class="action">🔎</a>
-    </td>
-    <td>
-      <img src="<%= meme.link %>" height="100px">
-    </td>
-    <td class="number">
-      <%= rank %>
-    </td>
-    <td class="number">
-      <%= meme.imgur_views %>
-    </td>
-    <td class="limited">
-      <%= if meme.imgur_title.nil? then "—" else meme.imgur_title end %>
-    </td>
-    <% @tags.each do |tag| %>
+    <table class="period table display compact">
+      <thead>
+        <tr>
+          <th></th><th></th><th>rank</th><th class="number">views</th><th class="limited">title</th><%@tags.each {|tag| %><th><%= tag.name %></th><%}%>
+      </tr>
+    </thead>
+    <tbody>
+      <%  rank = 0
+      @period.memes.each do |meme| 
+        rank += 1
+      %>
+    <tr data-valid="<%= meme.valid %>">
       <td>
-        <%= if meme.tags.include? tag then "✓" else "" end %>
+        <a href="/memes/<%= @period.id %>/<%= meme.id %>" class="action">🔎</a>
       </td>
-    <% end %>
-    </tr>
-  <% end %>
-</tbody>
-      </table>
-
+      <td>
+        <img src="<%= meme.link %>" height="100px">
+      </td>
+      <td class="number">
+        <%= rank %>
+      </td>
+      <td class="number">
+        <%= meme.imgur_views %>
+      </td>
+      <td class="limited">
+        <%= if meme.imgur_title.nil? then "—" else meme.imgur_title end %>
+        </td>
+        <% @tags.each do |tag| %>
+          <td>
+            <%= if meme.tags.include? tag then "✓" else "" end %>
+            </td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<iframe id="meme_view" src=""></iframe>
+</div>

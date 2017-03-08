@@ -101,7 +101,7 @@ class MemeCollectorApplication < Sinatra::Base
     if @meme.nil? then
       halt "Could not find meme with id = #{meme_id}"
     end
-    erb :meme
+    erb :meme, :layout => :no_layout
   end
 
   get "/valid/memes" do
@@ -167,12 +167,7 @@ class MemeCollectorApplication < Sinatra::Base
       end
 
       period_id = request['period']
-
-      if not period_id.nil?
-        redirect "/periods/#{period_id}"
-      else
-        redirect "/overview"
-      end
+      redirect "/memes/#{period_id}/#{@meme.id}"
     else
       halt "no form data"
     end
