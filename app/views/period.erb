@@ -10,7 +10,7 @@
 <table class="period">
   <thead>
     <tr>
-      <th></th><th>rank</th><th>valid</th><th>tags</th><th class="number">views</th><th>title</th>
+      <th></th><th></th><th>rank</th><th>valid</th><th>tags</th><th class="number">views</th><th>title</th>
     </tr>
   </thead>
   <tbody>
@@ -21,6 +21,9 @@
   <tr data-valid="<%= meme.valid %>">
     <td>
       <a href="/memes/<%= @period.id %>/<%= meme.id %>" class="action">🔎</a>
+    </td>
+    <td>
+      <img src="<%= meme.link %>" height="50px">
     </td>
     <td class="number">
       <%= rank %>
