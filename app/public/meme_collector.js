@@ -1,14 +1,21 @@
+const filterInvalid = function(settings, data, dataIndex) {
+  const table = $('.table').DataTable();
+  const $row = table.rows(dataIndex).nodes().to$().first();
+  const validMeme = !$row.attr('data-valid') || $row.data('valid');
+  const validOnlyCheckBox = $('#valid_only');
 
-console.log("Hi");
-const validCheckBoxElement = document.getElementById("valid_only");
-const toggleInvalidMemes = function () {
-  const invalidMemes = document.querySelectorAll("[data-valid='false']");
-
-  for (let i = 0; i < invalidMemes.length; i++) {
-    const meme = invalidMemes[i];
-    meme.style.display = validCheckBoxElement.checked ? 'none' : 'table-row';
-  }
+  return validOnlyCheckBox.is(':checked') ? validMeme : true;
 };
 
-validCheckBoxElement.addEventListener("change", toggleInvalidMemes);
-toggleInvalidMemes();
+$.fn.dataTable.ext.search.push(filterInvalid);
+
+
+const dataTableConfiguration = {
+  "pageLength": 50
+};
+
+$(document).ready(function () {
+  const table = $('.table').DataTable(dataTableConfiguration);
+
+  $('#valid_only').change(() => table.draw());
+});
