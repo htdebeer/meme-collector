@@ -10,7 +10,7 @@
 <table class="period">
   <thead>
     <tr>
-      <th></th><th></th><th>rank</th><th>valid</th><th>tags</th><th class="number">views</th><th>title</th>
+      <th></th><th></th><th>rank</th><th>tags</th><th class="number">views</th><th>title</th>
     </tr>
   </thead>
   <tbody>
@@ -27,16 +27,6 @@
     </td>
     <td class="number">
       <%= rank %>
-    </td>
-    <td class="valid">
-      <%= if meme.valid.nil? then
-            "☐"
-          elsif meme.valid then
-            "☑"
-          else
-            "☒"
-          end
-        %>
     </td>
     <td>
       <%= if meme.tags.empty?

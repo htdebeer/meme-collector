@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Meme Collector</title>
     <link rel="stylesheet" href="/style.css">
+    <script src="/lib/jquery-3.1.1.js"></script>
   </head>
   <body>
     <header>
@@ -15,6 +16,9 @@
           <li><a href="/tags">manage tags</a></li>
         </ul>
       </nav>
+      <div id="global_settings">
+        <label for="valid_only"><input type="checkbox" name="valid_only" id="valid_only" checked>show only valid memes</label>
+      </div>
     </header>
 
     <main>
@@ -26,5 +30,6 @@
         Meme Collector is Free Software and is released under the GPLv3
       </p>
     </footer>
+    <script src="/meme_collector.js"></script>
   </body>
 </html>
