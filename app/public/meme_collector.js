@@ -15,7 +15,7 @@ const dataTableConfiguration = {
   "dom": "<iftlpi>",
   "columnDefs": [{ "width": "40%", targets: "limited"}],
   "scrollX": "true",
-  "scrollY": "50vh",
+  "scrollY": "55vh",
   "select": "single",
   "autoResize": false
 };

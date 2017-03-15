@@ -14,7 +14,7 @@ header {
   padding-bottom: 1ex;
   padding-left: 2ex;
   border-bottom: 1px solid black;
-  height: 10vh;
+  max-height: 8vh;
 }
 
 header h1 {
@@ -74,18 +74,21 @@ main h2 {
 
 #wrapper {
   display: flex;
-  height: 85vh;
+  max-height: 80vh;
   margin: 0;
   padding: 0;
 }
 
 #meme_list {
-  width: 50%;
+  max-width: 50vw;
+  max-height: 80vh;
   flex: 0 0 50%;
+  font-size: smaller;
 }
 
 #meme_view {
   flex: 1;
+  max-width: 50vw;
   margin-left: 2ex;
   border-left: 1px solid black;
   padding: 0;
