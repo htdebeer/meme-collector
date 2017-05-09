@@ -1,0 +1,46 @@
+<h1>Histogram</h1>
+<div class="legend">
+    <h3>Tags</h3>
+    <p>
+        Select tags to show tagged memes:
+    </p>
+    <p>
+    <% @tags.each do |tag| %>
+        <label class="tag">
+            <input type="checkbox" name="<%= "tag-#{tag.name.gsub(' ', '-')}" %>" value="<%= tag.name %>" checked />
+            <%= tag.name  %>
+        </label>
+    <% end %>
+</p>
+</div>
+<div class="histogram">
+    <% @periods.each do |period| %>
+        <div class="week">
+            <div class="period">
+                <a href="/periods/<%= period.id %>">
+                    <time datetime="<%= period.from %>"><%= period.from %></time>
+                </a>
+            </div>
+            <% 
+                period.memes.first(50).each do |meme| 
+                    if meme.valid then 
+                        ext = if meme.imgur_type.nil? then 
+                                  "jpg" 
+                              else 
+                                  meme.imgur_type.split("/").last 
+                              end
+                        puts "'#{meme.tags}'"
+                        tags = meme.tags.map{|tag| "tag-#{tag.name.gsub(' ', '-')}"}.join(" ")
+            %>
+        <div class="meme <%= tags %>">
+                <a href="/memes/<%= period.id %>/<%= meme.id %>">
+                    <img src="<%= "img/#{meme.id}.#{ext}" %>"/>
+                </a>
+            </div>
+            <%     
+                   end 
+                end        
+            %>
+        </div>
+    <% end %>
+</div>

@@ -25,6 +25,29 @@ const selectRowAction = function (row) {
   $("#meme_view").attr("src", memeURL);
 };
 
+const setupHistogram = function () {
+    const tagSelectors = $(document).find(".legend input[type='checkbox']");
+    const memes = $(document).find(".histogram .meme");
+    
+    if (0 >= tagSelectors.length || 0 >= memes.length) {
+        return;
+    }
+
+    const toggleMemes = function () {
+        const tagSelector = this;
+        const tag = tagSelector.getAttribute("name");
+        const relatedMemes = memes.filter("." + tag);
+
+        if (tagSelector.checked) {
+            relatedMemes.show();
+        } else {
+            relatedMemes.hide();
+        }
+    };
+
+    tagSelectors.change(toggleMemes);
+};
+
 $(document).ready(function () {
   $(".table").on("init.dt", function () {
     const table = $(this).dataTable().api();
@@ -44,5 +67,7 @@ $(document).ready(function () {
       selectRowAction(table.rows(indexes).nodes().to$());
     }
   });
+
+  setupHistogram();
 
 });

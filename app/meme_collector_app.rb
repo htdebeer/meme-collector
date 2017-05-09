@@ -52,6 +52,12 @@ class MemeCollectorApplication < Sinatra::Base
     erb :overview
   end
 
+  get "/histogram" do
+      @periods = MC.periods
+      @tags = MC.tags
+      erb :histogram
+  end
+
   get "/tags" do
     @errors = [] if @errors.nil?
     @tags = MC.tags

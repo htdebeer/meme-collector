@@ -87,3 +87,22 @@ queries:
 - Select the number of ranked memes:
 
       SELECT COUNT(*) FROM rankings;
+
+### Download all memes
+
+The script `example/create_script_to_download_all_memes.rb` writes to STDOUT a
+script with for each meme the following line:
+
+    if ! [ -f <id>.jpeg ]; then curl http://i.imgur.com/<link> -o <id>.jpeg; fi
+
+In other words, it downloads each meme to a file named by the meme's id in the
+database and its extension. If the file already exists, it does not download
+again. 
+
+The output of the scripts is put in `app/public/img/download_images.sh`. If
+you run this file in that directory, it will download the images to the
+directory `app/public/img`.
+
+These images are used by the simple histogram representation, which puts all
+the images per week and you can show/hide a meme by its tags. These images are
+not added to the repository.

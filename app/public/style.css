@@ -208,3 +208,41 @@ button[name='delete']:hover {
   color: black;
   background: red;
 }
+
+
+.histogram {
+    overflow: auto;
+    display: table;
+}
+
+
+.legend {
+    margin-bottom: 1ex;
+}
+
+.histogram .week {
+    display: table-row;
+    border-top: 1px solid black;
+    white-space: nowrap;
+}
+
+.histogram .week div {
+    display: table-cell;
+    float: left;
+}
+
+.histogram .week .period {
+    padding-right: 1ex;
+}
+
+.histogram .week .meme {
+    padding: 0;
+    margin: 0;
+}
+
+.histogram .week .meme img {
+    max-width: 50px;
+    max-height: 50px;
+    margin: 0;
+    padding: 0;
+}
