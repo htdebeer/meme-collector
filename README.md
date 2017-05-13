@@ -106,3 +106,5 @@ directory `app/public/img`.
 These images are used by the simple histogram representation, which puts all
 the images per week and you can show/hide a meme by its tags. These images are
 not added to the repository.
+
+Warning: there are for about 1.8 GB meme images in the database.
