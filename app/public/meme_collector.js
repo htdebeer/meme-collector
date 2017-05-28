@@ -46,6 +46,19 @@ const setupHistogram = function () {
     };
 
     tagSelectors.change(toggleMemes);
+    
+    $("a#select_all").click(() => {
+        tagSelectors.prop("checked", true);
+        memes.show();
+    });
+    $("a#select_none").click(() => {
+        tagSelectors.prop("checked", false);
+        memes.hide();
+    });
+    $("a#invert_selection").click(() => {
+        tagSelectors.prop("checked", (_, oldValue) => !oldValue);
+        tagSelectors.trigger("change");
+    });
 };
 
 $(document).ready(function () {
