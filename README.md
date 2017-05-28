@@ -66,7 +66,8 @@ You can run the web application on your local machine as follows:
     ruby meme_collector_app.rb
 
 Now open [http://localhost:4567](http://localhost:4567) to explore, tag, and
-validate the collected memes.
+validate the collected memes. There is also a histogram page to allow a
+very simple visual exploration of the collected and tagged memes.
 
 ### Sqlite3
 
@@ -88,6 +89,59 @@ queries:
 
       SELECT COUNT(*) FROM rankings;
 
+- List the tags and the number of tagged memes, sorted from most tagged to
+  least tagged:
+
+      SELECT COUNT(meme_id) AS count, tag_name 
+      FROM tagged 
+      GROUP BY tag_name
+      ORDER BY count DESC;
+
+- List the tags and the number of tagged memes, sorted from most tagged to
+  least tagged, but only show the 10 most tagged tags:
+
+      SELECT COUNT(meme_id) AS count, tag_name 
+      FROM tagged 
+      GROUP BY tag_name
+      ORDER BY count DESC
+      LIMIT 10;
+
+  Currently, this gives as result:
+
+      1954| Donald Trump
+      1329| presidential candidate 2016
+      775 | wall
+      348 | Mexico
+      273 | Make _ Great Again
+      181 | Hillary Clinton
+      115 | the media
+      102 | China
+      99  | twitter
+      86  | hair
+
+- List those tags that have been tagged less than 6 times:
+
+      SELECT COUNT(meme_id) AS count, tag_name 
+      FROM tagged 
+      GROUP BY tag_name
+      HAVING count <= 5 
+      ORDER BY count;
+
+  Apparently, there are only 12:
+
+      1|anti-Trump
+      1|mechco
+      1|oil
+      1|rigged
+      2|Marie Le Pen
+      3|Boris Johnson
+      3|golf
+      3|lock her up
+      4|fascist
+      5|Brexit
+      5|black lives matter
+      5|not my president
+
 ### Download all memes
 
 The script `example/create_script_to_download_all_memes.rb` writes to STDOUT a
@@ -107,4 +161,5 @@ These images are used by the simple histogram representation, which puts all
 the images per week and you can show/hide a meme by its tags. These images are
 not added to the repository.
 
-Warning: there are for about 1.8 GB meme images in the database.
+Warning: there are for about 1.8 GB meme images in the database. Also, when
+loading the histogram, it will load all these images as well.
